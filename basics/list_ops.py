@@ -197,12 +197,18 @@ def demonstrate_list_comprehensions():
     print("\n" + "="*60)
     print("7. LIST COMPREHENSIONS")
     print("="*60)
-
+    # List comprehension is - include the for loop inside list array to generate required values
     # List comprehension technique - creating cubes
-    print("\n--- List Comprehension Example ---")
+    print("\n--- List Comprehension Example - 1 ---")
     cubes = [value ** 3 for value in range(1, 11)]
     print(f"Cubes of numbers 1-10 using list comprehension: {cubes}")
     print("Note: This is equivalent to a for loop but more concise!")
+    print("\n--- List Comprehension Example - 2 ---")
+    simple_list = [f'{j}{i}' for i in range(0, 11, 1) for j in ('a', 'b', 'c')]
+    print(simple_list)
+    print("\n--- List Comprehension Example - 3 ---")
+    simple_list = [f'{j}{i}' for i in range(0, 11, 1) for j in ('a', 'b', 'c') if j == 'a']
+    print(simple_list)
 
 
 def demonstrate_list_slicing():
