@@ -7,6 +7,7 @@
     - [1.2.2.1 Closure](#1221-closure)
     - [1.2.2.2 Decorator](#1222-decorator)
 - [1.3 Recursion](#13-recursion)
+- [1.4 Lambdas](#14-lambdas)
 
 <div style="text-align: justify;">
 
@@ -136,4 +137,28 @@ func()
 In FP paradigm, no **for-loop** or **while-loop**. Instead, it uses recursion. Recursion is a process in which a function
 calls itself directly or indirectly.
 
+## 1.4 Lambdas
+
+***lambda*** term comes from ***Lambda Calculus***, a formal system of mathematical logic for expressing computation
+based on function abstraction and application.
+
+In Python, we define anonymous functions called ***Lambda Expressions***. It is a short form of defining functions.
+The built-in Python function `callable()` returns *True* if the argument passed to it appears to be callable and *False* otherwise.
+
+- A lambda expression will typically have a parameter list, but it’s not required. You can define a lambda function 
+without parameters. The return value is then not dependent on any input parameters.
+
+```python
+forty_two_producer = lambda: 42
+print(forty_two_producer)
+```
+- The return value from a lambda expression can only be one single expression. 
+- A lambda expression can’t contain statements like `assignment` or `return`, nor can it contain control structures such as `for`, `while`, `if`, `else`, or `def`.
+- While lambda expressions can’t contain any conditional statements, they can contain ***conditional expressions***.
+```python
+print((lambda x: "even" if x % 2 == 0 else "odd")(3))
+```
+- A lambda expression has its own local namespace, so the parameter names don’t conflict with identical names in the global namespace. A lambda expression can access variables in the global namespace, but it can’t modify them.
+- To include a lambda expression in a formatted string literal, or ***f-string***, then you’ll need to enclose it in explicit parentheses.
+- 
 </div>
