@@ -19,7 +19,7 @@ For detailed installation instructions, please refer to our comprehensive [Insta
 - In interactive mode, the last printed expression is assigned to the variable `_`. 
   - This variable should be treated as read-only by the user. 
   - Don’t explicitly assign a value to it.
-- dlafkja
+- Python supports functional programming paradigms, including higher-order functions, closures, and decorators. See [Functional Programming Guide](docs/FP.md) for detailed examples.
 
 
 
