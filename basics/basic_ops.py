@@ -93,3 +93,22 @@ print("Complex from numbers:", complex(2, 3))
 # import this
 # print(this.s)
 
+# Boolean operations
+is_authenticated = True
+is_admin = True
+print(is_authenticated)
+print(not is_authenticated)
+x, y = 5, 10
+print( x != 10)
+print(is_admin and is_authenticated)
+print(not is_admin and is_authenticated)
+print(is_authenticated or is_admin)
+# Truthy and Falsy
+# Falsy
+print(bool(0))
+print(bool(""))
+print(bool([]))
+# Truthy
+print(bool(1))
+print(bool("Hello"))
+print(bool([21, 32, 43]))

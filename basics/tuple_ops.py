@@ -1,6 +1,6 @@
 """
 Tuple
-1. Tuple is an immutable list
+1. Tuple is an immutable list, ordered (based on insertion order), allows duplicates
 2. Tuple is defined by using parentheses ()
 3. Tuple is faster than list
 """
