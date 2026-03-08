@@ -24,6 +24,14 @@ def var_scope():
     print("local_variable value is : ", local_variable)
     print("global_variable value is :", global_variable )
 
+
+def named_args(a, b, c):
+    print(f"a: {a}, b: {b}, c: {c}")
+
+# We can return multiple value from a function, it returns a tuple
+def return_multiple_values():
+    return 10, "hello"
+
 def main():
     print(multiply(1, 2))
     print(add(1, 2, 3))
@@ -31,6 +39,12 @@ def main():
     print(add())
     print('pow: ', func_pow(2, 3))
     var_scope()
+    named_args(c=3, b=2, a=1) # we can pass arguments in any order as we are using named arguments approach
+    print(return_multiple_values())
+    print(*return_multiple_values())
+    number, name = return_multiple_values()
+    print(number, name)
+
 
 global_variable = 20
 
