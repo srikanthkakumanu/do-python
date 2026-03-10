@@ -74,6 +74,8 @@ greet(hello())  # pass function as value but not as an argument
 
 ### 1.2.2 Higher-Order functions
 
+A **Higher Order function** either takes a function as a argument or returns a function or both. It makes code more modular and reusable.
+
 A **Higher-Order** function:
 - A function can be passed to other functions as a parameter. This is also called — **Function composition**.
 - A function can return another function.
@@ -82,10 +84,14 @@ A **Higher-Order** function:
 
 #### 1.2.2.1 Closure
 
-**Closure** — Closures allow functions to remember and use variables from parent scope even after parent function has finished running.
-This makes essential them for **Higher-Order** functions.
+**Closure** — Closures allow functions to remember and use variables from parent scope even after parent function has 
+finished running.
+
+ A **Closure** is a function that remember values from its enclosing scope.
+This makes essential to them for **Higher-Order** functions.
 
 Closure Example:
+
 ```python
 def counter(start=0):  # higher order function
     count = start 
@@ -106,8 +112,18 @@ print(counter2())
 ```
 #### 1.2.2.2 Decorator
 
+**Decorators** → Add functionality to another function by wrapping it with additional logic. **Decorator** is a higher-order function as it takes a function as argument, returns a function.
+
 **Decorator** — Decorators extend or modify functions without changing their original code by wrapping them inside another function.
 They enhance **Higher-Order** functions by enabling tasks like caching results, transforming I/O, tracking function calls, controlling access etc.
+
+Some real Examples are:
+
+→ @require_auth (check user auth before func conditionally runs
+
+→ @validate_input (check & validate func arguments before func runs
+
+→ @preprocess (modify func arguments to be in a specific format)
 
 Decorator Example:
 
@@ -122,15 +138,11 @@ def decor(func):
         print("After function execution")  
     return wrap  
   
-# function to be decorated  
+# function to be decorated
+@decor 
 def func():  
     print("Inside the function!")  
   
-# applying the decorator  
-func = decor(func)  
-  
-# calling the decorated function  
-func()
 ```
 ## 1.3 Recursion
 
@@ -160,5 +172,5 @@ print((lambda x: "even" if x % 2 == 0 else "odd")(3))
 ```
 - A lambda expression has its own local namespace, so the parameter names don’t conflict with identical names in the global namespace. A lambda expression can access variables in the global namespace, but it can’t modify them.
 - To include a lambda expression in a formatted string literal, or ***f-string***, then you’ll need to enclose it in explicit parentheses.
-- 
+
 </div>

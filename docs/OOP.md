@@ -19,7 +19,10 @@
 
 - `self` refer to current object. I does not need to name as `self`, it can be any other name. But it is a standard convention to use `self`.
 
+
 ## Inheritance
 
 - Python supports multiple inheritance.
-- 
+- There is no concept called private, protected, public. All methods are public.
+  - But we simply follow convention `__` for private methods and `_` for protected methods.
+- In Python, all methods gets inherited including static methods to sub classes. We can call static methods over the class name. There is no such behavior like in Java.

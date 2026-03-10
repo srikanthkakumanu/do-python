@@ -2,7 +2,7 @@ class Animal:
 
     species = "Dogs" # class-level attribute
 
-    def __init__(self, name, color):
+    def __init__(self, name, color): # Constructor
         self.name = name # instance-level attribute
         self.color = color # instance-level attribute
 

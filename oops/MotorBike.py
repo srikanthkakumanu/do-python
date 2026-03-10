@@ -1,7 +1,7 @@
 from Vehicle import Vehicle
 
 class MotorBike(Vehicle):
-    def __init__(self, make, model, year, color=None, gears=4):
+    def __init__(self, make, model, year, color=None, gears=4): # Constructor
         # Constructor overriding: Call parent __init__ and add more
         super().__init__(make, model, year, color)
         self.gears = gears

@@ -1,6 +1,7 @@
 class Person:
 
     # instance attributes: id, name, age, address, gender are instance attributes that are unique each person object.
+    # Constructor
     def __init__(self, id=None, name=None, age=0, address=None, gender=None):
         super().__init__()
         self.__id = id

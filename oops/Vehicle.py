@@ -1,5 +1,5 @@
 class Vehicle:
-    def __init__(self, make, model, year, color=None):
+    def __init__(self, make, model, year, color=None): # Constructor
         self._make = make  # Private attribute
         self._model = model
         self._year = year

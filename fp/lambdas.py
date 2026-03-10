@@ -1,3 +1,4 @@
+# lambda functions are shorthand notation of defining a function.
 from functools import reduce # reduce() is part of functools
 from math import factorial
 

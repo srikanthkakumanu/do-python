@@ -1,7 +1,7 @@
 # Demonstration of multiple inheritance
 class Engine:
 
-    def __init__(self, horse_power):
+    def __init__(self, horse_power): # Constructor
         if not isinstance(horse_power, (int, float)) or horse_power <= 0:
             raise ValueError('Horse Power must be a positive number.')
         self.horse_power = horse_power
