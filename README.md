@@ -22,5 +22,15 @@ For detailed installation instructions, please refer to our comprehensive [Insta
 - Python supports functional programming paradigms, including higher-order functions, closures, and decorators. See [Functional Programming Guide](docs/FP.md) for detailed examples.
 - Exception handling is covered in our [Exception Handling Guide](docs/Exceptions.md).
 
+# Virtual Environments
 
+Virtual environment can be installed using this command in a desired directory: `python3 -m venv .venv` 
+
+A created virtual environment can be activated via: `source .venv/bin/activate` and it can be de-activated via `deactivate`.
+
+We can freeze the environment and creating requirements.txt → `pip3 freeze > requirements.txt`
+
+To use `requirements.txt`, we need to use this command after venv is installed and activated: `pip3 install -r requirements.txt`
+
+Note: Make sure you select right environment based python interpreter. Homebrew (system) environment is different and .venv environment is different. Both use different pip3 environments to avoid conflicts or collision of packages.
 
