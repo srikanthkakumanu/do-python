@@ -22,6 +22,10 @@ For detailed installation instructions, please refer to our comprehensive [Insta
 - Python supports functional programming paradigms, including higher-order functions, closures, and decorators. See [Functional Programming Guide](docs/FP.md) for detailed examples.
 - Exception handling is covered in our [Exception Handling Guide](docs/Exceptions.md).
 
+## Code Formatting and Linting
+
+This project uses Ruff, a fast Python code formatter and linter designed as a drop-in replacement for Black. It ensures consistent code formatting while focusing on performance. For detailed instructions on using Ruff, see [Ruff Guide](docs/Ruff.md).
+
 # Virtual Environments
 
 Virtual environment can be installed using this command in a desired directory: `python3 -m venv .venv` 

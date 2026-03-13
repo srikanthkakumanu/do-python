@@ -1,4 +1,6 @@
-from bottle import route, run, request, response, template, static_file
+from bottle import Bottle, route, run, request, response, template, static_file, default_app
+
+app = default_app()
 
 # data
 ninjas = [
