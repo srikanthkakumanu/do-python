@@ -18,6 +18,8 @@ print(some_text.lower())
 print(some_text.replace("sample", "test"))
 print(some_text.find("sample"))
 print(some_text.split(" ")) # splits the string into a list
+# below is multi-line strings with special characters
+print("""Hello World, This can't be a fake""")
 url = "https://www.google.com"
 print(url.removeprefix("https://"))
 print(url.removesuffix(".com"))

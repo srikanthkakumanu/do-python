@@ -11,3 +11,4 @@ urllib3==2.6.3
 bottle==0.13.4
 ruff==0.15.6
 pytest==9.0.2
+mypy==1.19.1

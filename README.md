@@ -21,6 +21,13 @@ For detailed installation instructions, please refer to our comprehensive [Insta
   - Don’t explicitly assign a value to it.
 - Python supports functional programming paradigms, including higher-order functions, closures, and decorators. See [Functional Programming Guide](docs/FP.md) for detailed examples.
 - Exception handling is covered in our [Exception Handling Guide](docs/Exceptions.md).
+- **Type hints**: Static type checking is covered in our codebase using mypy and typing modules.
+- Date and time operations is covered in our codebase using pendulum module.
+- Simple prototype REST API using Bottle is covered in our codebase.
+- URL based requests and JSON operations is covered in our codebase using urllib and requests modules.
+- Rich text formatting is covered in our codebase using rich module.
+- OpenWeatherMap API is covered in our codebase.
+- Pydantic v2 is covered in our codebase for data validations.
 
 ## Code Formatting and Linting
 
