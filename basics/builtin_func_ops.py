@@ -21,7 +21,6 @@ def abs_function():
     # regardless of whether it is positive or negative.
 
 
-
 async def async_generator():
     """
     An example of an asynchronous generator function.
@@ -50,7 +49,6 @@ async def aiter_function():
     print("Asynchronous iteration completed!")
 
 
-
 def all_function():
     """
     Demonstrates the all() function.
@@ -64,7 +62,6 @@ def all_function():
     print("\n--- all() Function Example ---")
     print(f"All numbers are even: {all(x % 2 == 0 for x in range(1, 11))}")
     print(f"All numbers are even: {all(x % 2 == 0 for x in range(10, 21))}")
-
 
 
 async def anext_function():
@@ -84,7 +81,6 @@ async def anext_function():
     print(await anext(iterator))
 
 
-
 def ascii_function():
     """
     Demonstrates the ascii() function.
@@ -100,7 +96,6 @@ def ascii_function():
     print(f"Unicode code point for '😊' is: {ascii('😊')}")
 
     print(f"Unicode code point for 'Z' is: {ascii('Z')}")
-
 
 
 def chr_function():
@@ -119,7 +114,6 @@ def chr_function():
     print(f"Character for Unicode code point 99 is: {chr(99)}")
 
 
-
 def ord_function():
     """
     Demonstrates the ord() function.
@@ -134,7 +128,6 @@ def ord_function():
     print(f"Unicode code point for 'a' is: {ord('a')}")
     print(f"Unicode code point for 'b' is: {ord('b')}")
     print(f"Unicode code point for 'c' is: {ord('c')}")
-
 
 
 def bin_function():
@@ -193,7 +186,7 @@ def bytearray_function():
 
     # bytearray() function
     print("\n--- bytearray() Function Example ---")
-    byte_array = bytearray(b'hello')
+    byte_array = bytearray(b"hello")
     print(f"Byte array from a string: {byte_array}")
     print(f"Length of the byte array: {len(byte_array)}")
 
@@ -209,10 +202,9 @@ def bytes_function():
 
     # bytes() function
     print("\n--- bytes() Function Example ---")
-    byte_array = bytes(b'hello')
+    byte_array = bytes(b"hello")
     print(f"Bytes from a string: {byte_array}")
     print(f"Length of the bytes: {len(byte_array)}")
-
 
 
 def zip_function():
@@ -226,7 +218,7 @@ def zip_function():
 
     # zip() function
     print("\n--- zip() Function Example ---")
-    names = ['John', 'Jane', 'Alice']
+    names = ["John", "Jane", "Alice"]
     ages = [25, 30, 28]
     for name, age in zip(names, ages):
         print(f"Name: {name}, Age: {age}")
@@ -239,7 +231,6 @@ def zip_function():
     # * operator unpacks the tuple / unzips the list
     x2, y2 = zip(*zip(x, y))
     print(x == list(x2), y == list(y2))
-
 
 
 def slice_function():
@@ -257,8 +248,9 @@ def slice_function():
     print(f"Original sequence: {sequence}")
     print(f"Sliced sequence: {sequence[slice(6, None)]}")  # from start to end
     print(f"Sliced sequence: {sequence[slice(None, 5)]}")  # from start to index 4
-    print(f"Sliced sequence: {sequence[slice(5, 12, 2)]}")  # from index 5 to index 11 step 2
-
+    print(
+        f"Sliced sequence: {sequence[slice(5, 12, 2)]}"
+    )  # from index 5 to index 11 step 2
 
 
 def reversed_function():
@@ -295,6 +287,13 @@ def set_function():
     print(f"Convert list to set: {set(sequence)}")  # Note: set() converts list to set
     print(f"Type of set: {type(set(sequence))}")
 
+    # another set() example
+    print("\n--- set() Function Example ---")
+    sequence = [1, 2, 3, 2, 4, 4, 5]
+    print(f"Original sequence: {sequence}")
+    print(f"Set from sequence: {set(sequence)}")
+    print(f"Convert list to set: {set(sequence)}")  # Note: set() converts list to set
+    print(f"Type of set: {type(set(sequence))}")
 
 
 def complex_function():
@@ -335,6 +334,7 @@ def complex_function():
     print("Creating complex number using real and imaginary parts: -1.23, 4.5")
     print(f"Complex number: {complex(-1.23, 4.5)}")
 
+
 def main():
     abs_function()
     asyncio.run(aiter_function())
@@ -353,6 +353,7 @@ def main():
     reversed_function()
     set_function()
     complex_function()
+
 
 # Run the demonstration if this file is executed directly
 if __name__ == "__main__":
