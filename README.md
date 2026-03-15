@@ -33,7 +33,7 @@ For detailed installation instructions, please refer to our comprehensive [Insta
 
 Ruff automatically format and lint the python code as per Python Style Guide i.e. Python Enhancement Proposal (PEP8). This project uses Ruff, a fast Python code formatter and linter designed as a drop-in replacement for Black. It ensures consistent code formatting while focusing on performance. Ruff advocates Python Style Guide (PEP8) indentation guidelines. For detailed instructions on using Ruff, see [Ruff Guide](docs/Ruff.md).
 
-# Virtual Environments
+## Virtual Environments
 
 Virtual environment can be installed using this command in a desired directory: `python3 -m venv .venv`
 
@@ -45,12 +45,37 @@ To use `requirements.txt`, we need to use this command after venv is installed a
 
 Note: Make sure you select right virtual environment based python interpreter. Homebrew (system) environment is different and .venv environment is different. Both use different pip3 environments to avoid conflicts or collision of packages.
 
-# Environment Variables and Using dotenv module
+Alternatively, **uv** is a blazingly fast package manager for Python that replaces `pip`, `venv`, and more.
 
-We can read environment variables using `os.environ` module:`os.environ.get('VARIABLE_NAME')`.
+Common commands:
 
-We can set environment variables via command line in your OS or programmatically by using `os.environ['VARIABLE_NAME'] = 'VALUE'`.
+```bash
+# Create new project
+uv init project-name
 
-We can unset environment variables using `del os.environ['VARIABLE_NAME']`.
+# Add packages
+uv add package-name
 
-We can also use `dotenv` module to read environment variables from a `.env` file. It is a Python package that loads environment variables from a `.env` file into the Python environment. The `.env` file should be placed in the same directory as the Python script. The `.env` file should contain one variable per line in the format `VARIABLE_NAME=VALUE`. This is an efficient way to manage environment variables in a Python script.
+# Install all dependencies
+uv sync
+
+# Run Python scripts
+uv run python script.py
+```
+
+For more details, see [uv Guide](docs/uv.md).
+
+## Environment Variables and Using dotenv module
+
+We can read environment variables using the `os` module: `os.environ.get('VARIABLE_NAME')`.
+
+We can set environment variables via command line in your OS or programmatically by using:
+`os.environ['VARIABLE_NAME'] = 'VALUE'`
+
+We can unset environment variables using:
+`del os.environ['VARIABLE_NAME']`
+
+We can also use the `python-dotenv` module to read environment variables from a `.env` file. It is a Python package that loads environment variables from a `.env` file into the Python environment. The `.env` file should be placed in the root directory of the project. The `.env` file should contain one variable per line in the format `VARIABLE_NAME=VALUE`. This is an efficient way to manage environment variables in a Python script.
+
+
+

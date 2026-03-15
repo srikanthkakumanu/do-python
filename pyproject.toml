@@ -1,0 +1,29 @@
+[project]
+name = "do-python"
+version = "0.1.0"
+description = "A project to demonstrate Python skills"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "certifi==2026.2.25",
+    "charset-normalizer==3.4.5",
+    "idna==3.11",
+    "markdown-it-py==4.0.0",
+    "mdurl==0.1.2",
+    "Pygments==2.19.2",
+    "rich==14.3.3",
+    "pendulum==3.2.0",
+    "requests==2.32.5",
+    "urllib3==2.6.3",
+    "bottle==0.13.4",
+    "ruff==0.15.6",
+    "python-dotenv==1.2.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest==9.0.2",
+    "mypy==1.19.1",
+    "ipykernel==7.2.0",
+    "black==26.3.1",
+]
