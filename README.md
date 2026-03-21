@@ -27,43 +27,14 @@ For detailed installation instructions, please refer to our comprehensive [Insta
 - URL based requests and JSON operations is covered in our codebase using urllib and requests modules.
 - Rich text formatting is covered in our codebase using rich module.
 - OpenWeatherMap API is covered in our codebase.
-- Pydantic v2 is covered in our codebase for data validations.
+- Code formatting and linting is covered in our codebase using Ruff.
+- Virtual environments are covered in our codebase using venv module and is covered in our [Virtual Environments Guide](docs/virtual_environments.md). 
+- Package management is covered in our codebase using uv and is covered in [UV Guide](docs/uv.md).
+- Async IO and Concurrency is covered in our codebase using asyncio module and is covered in [Concurrency Guide](docs/concurrency.md).
 
 ## Code Formatting and Linting
 
 Ruff automatically format and lint the python code as per Python Style Guide i.e. Python Enhancement Proposal (PEP8). This project uses Ruff, a fast Python code formatter and linter designed as a drop-in replacement for Black. It ensures consistent code formatting while focusing on performance. Ruff advocates Python Style Guide (PEP8) indentation guidelines. For detailed instructions on using Ruff, see [Ruff Guide](docs/Ruff.md).
-
-## Virtual Environments
-
-Virtual environment can be installed using this command in a desired directory: `python3 -m venv .venv`
-
-A created virtual environment can be activated via: `source .venv/bin/activate` and it can be de-activated via `deactivate`.
-
-We can freeze the environment and creating requirements.txt → `pip3 freeze > requirements.txt`
-
-To use `requirements.txt`, we need to use this command after venv is installed and activated: `pip3 install -r requirements.txt`
-
-Note: Make sure you select right virtual environment based python interpreter. Homebrew (system) environment is different and .venv environment is different. Both use different pip3 environments to avoid conflicts or collision of packages.
-
-Alternatively, **uv** is a blazingly fast package manager for Python that replaces `pip`, `venv`, and more.
-
-Common commands:
-
-```bash
-# Create new project
-uv init project-name
-
-# Add packages
-uv add package-name
-
-# Install all dependencies
-uv sync
-
-# Run Python scripts
-uv run python script.py
-```
-
-For more details, see [uv Guide](docs/uv.md).
 
 ## Environment Variables and Using dotenv module
 
@@ -77,5 +48,17 @@ We can unset environment variables using:
 
 We can also use the `python-dotenv` module to read environment variables from a `.env` file. It is a Python package that loads environment variables from a `.env` file into the Python environment. The `.env` file should be placed in the root directory of the project. The `.env` file should contain one variable per line in the format `VARIABLE_NAME=VALUE`. This is an efficient way to manage environment variables in a Python script.
 
+## Pydantic
+
+Pydantic brings runtime data validation to Python using type hints.Pydantic v2 is covered in our codebase.
+
+Pydantic in the Python ecosystem.
+
+Pydantic is everywhere:
+
+- FastAPI uses for request/response validation.
+- Django Ninja uses Pydantic for API schemas.
+- SQLModel combines Pydantic under the hook.
+- Modern Python frameworks rely on Pyantic under the hood.
 
 
